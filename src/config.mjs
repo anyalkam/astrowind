@@ -1,7 +1,7 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  server: { port: 80, host: true},
+  server: { port: 80 },
   name: 'Anyalkam',
 
   origin: 'https://astrowind.vercel.app',
