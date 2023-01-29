@@ -24,7 +24,7 @@ export default defineConfig({
   site: SITE.origin,
   base: SITE.basePathname,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-  server: { port: 80 },
+  server: { port: 80, host: true },
   output: 'server',
   adapter: node({
     mode: 'standalone'
