@@ -9,8 +9,11 @@ import image from '@astrojs/image';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import compress from 'astro-compress';
+import node from '@astrojs/node';
+
 
 import { SITE } from './src/config.mjs';
+
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -23,6 +26,9 @@ export default defineConfig({
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
   output: 'server',
+  adapter: node({
+    mode: 'standalone'
+  }),
 
   integrations: [
     tailwind({
